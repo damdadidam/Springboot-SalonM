@@ -13,7 +13,7 @@
   <title>이야기를 풀어놓다, SalonM</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="/css/styles.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 </head>
@@ -28,7 +28,7 @@
                 <div class="menu">
                 
                     <c:choose>
-                    <c:when test="${empty principal}">
+                    <c:when test="${!empty principal}">
                     <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="/auth/loginForm">로그인</a>
@@ -59,13 +59,5 @@
             </nav>
         </section>
 
-        <section class="head">
-            <div class="home">
-                <div class="home__img"></div>
-                <div class="home__title">Lights in the city 2019</div>
-                <div class="home__info">Artistic action by Yed Ammu</div>
-            </div>
-        </section>
     </header>
-<br>
   
