@@ -8,7 +8,7 @@
 
     <section>
         <div class="join__box">
-            <form>
+            <form action="/auth/loginProc" method="post">
                 <table>
                     <tr>
                         <td class="join__sub__title">사용자명 입력</td>
@@ -27,9 +27,8 @@
                         </td>
                     </tr>
                 </table>
+                <button id="btn-save" class="join__button">계정 로그인</button>
             </form>
-
-            <button id="btn-save" class="join__button">계정 로그인</button>
         </div>
     </section>
 </main>
