@@ -15,7 +15,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <input class="join__input" type="text" id="email">
+                            <input name="username" class="join__input" type="text" id="username">
                         </td>
                     </tr>
                     <tr>
@@ -23,7 +23,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <input class="join__input" type="password" id="password">
+                            <input name="password" class="join__input" type="password" id="password">
                         </td>
                     </tr>
                 </table>

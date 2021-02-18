@@ -15,7 +15,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <input class="join__input" type="text" placeholder='"@를 포함하여 작성"' id="username">
+                            <input class="join__input" type="text" placeholder='"@를 포함하여 작성"' id="email">
                         </td>
                     </tr>
                     <tr>
@@ -23,7 +23,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <input class="join__input" type="text" id="email" placeholder='"한/영 혼용 가능"'>
+                            <input class="join__input" type="text" id="username" placeholder='"한/영 혼용 가능"'>
                         </td>
                     </tr>
                     <tr>
