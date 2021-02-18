@@ -16,6 +16,10 @@
   <link rel="stylesheet" href="/css/styles.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="/js/summernote/summernote-lite.js"></script>
+	<script src="/js/summernote/lang/summernote-ko-KR.js"></script>
+	<link rel="stylesheet" href="/css/summernote/summernote-lite.css">
+
 </head>
 <body>
     <header>
@@ -42,16 +46,16 @@
                     <c:otherwise>
                     <ul>
                         <li class="nav__dropdown">
-                            <a href="#">bookshelf</a>
+                            <a href="/board/shelf">bookshelves</a>
                             <ul>
                                 <li><a href="#">예담의 글서랍</a></li>
                                 <li><a href="#">지하의 글서랍</a></li>
                                 <li><a href="#">정주의 글서랍</a></li>
                             </ul>
                         </li>
-                        <li><a class="nav-link" href="#">write</a></li>
-                        <li><a class="nav-link" href="#">info</a></li>
-                        <li><a class="nav-link" href="#">logout</a></li>
+                        <li><a class="nav-link" href="/board/saveForm">write</a></li>
+                        <li><a class="nav-link" href="/user/updateForm">info</a></li>
+                        <li><a class="nav-link" href="/logout">logout</a></li>
                     </ul>
                     </c:otherwise>
                     </c:choose>

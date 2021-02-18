@@ -10,8 +10,17 @@ import com.m.salonM.config.auth.PrincipalDetail;
 public class BoardController {
 
 	@GetMapping({"","/"})
-	public String index() {
-		
+	public String index() {		
 		return "index";
+	}
+	
+	@GetMapping("board/saveForm")
+	public String saveForm() {
+		return "board/saveForm";
+	}
+	
+	@GetMapping("board/shelf")
+	public String shelf() {
+		return "board/shelf";
 	}
 }
