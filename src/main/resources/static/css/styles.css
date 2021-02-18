@@ -243,6 +243,91 @@ button:hover {
 	height: 40px;
 }
 
+/*여기까지 saveForm*/
+
+/*여기부터 shelf*/
+
+.sec__shelf {
+    background-image: url("../image/bookshelf.png");
+    height: 500px;
+    width: 30%;
+    margin: 10px auto 0 auto;
+    background-size: 100% 100%;
+}
+
+.shelf__boxes {
+    padding-top: 47px;
+}
+
+.shelf__box {
+    margin: 3px auto 0 auto;
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 5px;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: rgb(160, 160, 160);
+    border-right: 0;
+    border-left: 0;
+}
+
+.shelf__title {
+    font-size: 19px;
+    font-weight: 800;
+    color: rgb(49, 49, 49);
+}
+
+.shelf__content {
+    font-size: 13px;
+    color: rgb(49, 49, 49);
+    
+    max-height: 40px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.shelf__anchor {
+    font-size: 10px;
+    color: rgb(49, 49, 49);
+}
+
+.shelf__anchor a{
+    color: rgb(49, 49, 49);
+}
+
+.shelf__anchor :hover{
+    text-decoration: none;
+}
+
+.shelf__date {
+    font-size: 11px;
+    color: rgb(129, 129, 129);
+    
+}
+
+.prevnext {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+#prevnext {
+	display: flex;
+	list-style-type: none;
+	gap: 10px;
+	padding-left: 0;
+	margin: 0px auto 0 auto;
+}
+
+
+
+
+
+/* 여기까지 shelf css */
+
 footer {
 	text-align: center;
 	font-size: small;
