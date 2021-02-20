@@ -323,10 +323,18 @@ button:hover {
 }
 
 
-
-
-
 /* 여기까지 shelf css */
+
+/* 여기부터 detail css */
+.detail__info {
+	padding-bottom: 20px;
+}
+
+.detail__button {
+    width: 12%;
+    font-size: 12px;
+}
+/* 여기까지 detail css*/
 
 footer {
 	text-align: center;
