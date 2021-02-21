@@ -54,7 +54,7 @@
                             </ul>
                         </li>
                         <li><a class="nav-link" href="/board/saveForm">write</a></li>
-                        <li><a class="nav-link" href="/user/updateForm">info</a></li>
+                        <li><a class="nav-link" href="/user/updateForm">member</a></li>
                         <li><a class="nav-link" href="/logout">logout</a></li>
                     </ul>
                     </c:otherwise>
