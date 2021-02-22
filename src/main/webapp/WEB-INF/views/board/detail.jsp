@@ -29,6 +29,39 @@
 	                <button class="detail__button" id="btn-delete">delete</button>
                 </c:if>
             </div>
+            
+            <div class="reply__box">
+            	<form>
+            		<input type="hidden" id="userId" value="${principal.user.id}">
+            		<input type="hidden" id="boardId" value="${board.id}">
+            		<div class="reply__content">
+            			<textarea id="reply-content" class="form-control" rows="1"></textarea>
+            		</div>
+            		<div class="reply__button">
+            			<button class="detail__button" type="button" id="btn-reply-save">Comment</button>
+            		</div>
+            	</form>
+            </div>
+            
+            <br>
+            <div class="comment__box">
+                <div>Comments</div>
+                <ul id= "reply-box">
+                    <c:forEach var="reply" items="${board.replies}">
+                        <li id="reply-${reply.id}" class="d-flex justufy-content-between">
+                            <div class="d-flex">
+                                <div class="font-italic">작성자 : ${reply.user.username} &nbsp;</div>
+                                <c:if test="${reply.user.id==principal.user.id}">
+                                    <button onclick="index.replyDelete(${board.id},${reply.id})" class="badge">delete</button>
+                                </c:if>
+                            </div>
+                            <div>${reply.content}</div>
+                        </li>
+                    </c:forEach>
+                </ul>
+            </div>
+            
+            
     </div>
     
    

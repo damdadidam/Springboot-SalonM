@@ -9,9 +9,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.m.salonM.config.auth.PrincipalDetail;
+import com.m.salonM.dto.ReplySaveRequestDto;
 import com.m.salonM.model.Board;
+import com.m.salonM.model.Reply;
 import com.m.salonM.model.User;
 import com.m.salonM.repository.BoardRepository;
+import com.m.salonM.repository.ReplyRepository;
 
 @Service
 public class BoardService {
@@ -19,6 +22,8 @@ public class BoardService {
 	@Autowired
 	private BoardRepository boardRepository;
 	
+	@Autowired
+	private ReplyRepository replyRepository;
 	
 	@Transactional
 	public void write(Board board, User user) {
@@ -59,5 +64,20 @@ public class BoardService {
 				});
 		board.setTitle(requestBoard.getTitle());
 		board.setContent(requestBoard.getContent());
+	}
+	
+	@Transactional
+	public void writeReply(ReplySaveRequestDto replySaveRequestDto) {
+		replyRepository.mSave(replySaveRequestDto.getUserId(), replySaveRequestDto.getBoardId(), replySaveRequestDto.getContent());
+	}
+	
+	@Transactional
+	public void replyDelete(int replyId, PrincipalDetail principal) {
+		Optional<Reply> reply = replyRepository.findById(replyId);
+		if(reply.get().getUser().getId()==principal.getUser().getId()) {
+			replyRepository.deleteById(replyId);
+		}else {
+			throw new IllegalStateException("댓글 삭제 실패: 해당 댓글 작성자가 아닙니다.");
+		}
 	}
 }

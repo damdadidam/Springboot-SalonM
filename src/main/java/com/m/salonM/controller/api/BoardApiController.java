@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.m.salonM.config.auth.PrincipalDetail;
+import com.m.salonM.dto.ReplySaveRequestDto;
 import com.m.salonM.dto.ResponseDto;
 import com.m.salonM.model.Board;
 import com.m.salonM.service.BoardService;
@@ -38,4 +39,17 @@ public class BoardApiController {
 		boardService.update(id,board);
 		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
 	}
+	
+	@PostMapping("/api/{board}/boardId/reply")
+	public ResponseDto<Integer> replySave(@RequestBody ReplySaveRequestDto replySaveRequestDto) {
+		boardService.writeReply(replySaveRequestDto);
+		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
+	}
+	
+	@DeleteMapping("/api/board/{boardId}/reply/{replyId}")
+	public ResponseDto<Integer> replyDelete(@PathVariable int replyId, @AuthenticationPrincipal PrincipalDetail principal){
+		boardService.replyDelete(replyId, principal);
+		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
+	}
+	
 }

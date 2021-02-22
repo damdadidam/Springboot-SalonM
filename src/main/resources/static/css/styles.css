@@ -45,6 +45,14 @@ nav {
 	font-size: 16px;
 }
 
+#navbar-two {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+	list-style-type: none;
+	margin: 20px 0 0 0;
+}
+
 .nav__dropdown {
 	display: inline-block;
 	position: relative;
@@ -128,6 +136,11 @@ main {
 	font-size: 13px;
 	color: rgb(49, 49, 49);
 	margin-bottom: 5px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 .article__anchor {
@@ -251,7 +264,7 @@ button:hover {
 
 .sec__shelf {
     background-image: url("../image/bookshelf.png");
-    height: 500px;
+    height: 600px;
     width: 30%;
     margin: 10px auto 0 auto;
     background-size: 100% 100%;
@@ -262,7 +275,7 @@ button:hover {
 }
 
 .shelf__box {
-    margin: 3px auto 0 auto;
+    margin: 15px auto 0 auto;
     width: 75%;
     display: grid;
     grid-template-columns: 1fr;
@@ -335,6 +348,66 @@ button:hover {
 .detail__button {
     width: 12%;
     font-size: 12px;
+}
+
+.reply__box {
+border: rgb(175, 175, 175) 2px solid;
+margin-top: 50px;
+border-radius: 4px;
+height: 100px;
+}
+
+.reply__content{
+    text-align: center;
+}
+
+.reply__box textarea {
+    text-align: left;
+    margin: 9px auto;
+    width: 94%;
+    height: 40px;
+    padding: 0;
+}
+
+.reply__button {
+    margin-left: 20px;
+}
+
+.comment__box {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.comment__box > div {
+    border-bottom: solid rgb(117, 117, 117) 1px;
+}
+
+#reply-box {
+    padding-left: 22px;
+}
+
+#reply-box li{
+    display: block;
+    margin-bottom: 13px;
+    border-bottom:  rgb(220, 220, 220) 1px solid;
+}
+
+#reply-box li div{
+    display: flex;
+}
+
+.badge{
+text-align: center;
+background-color: darkgrey;
+font-weight: 400;
+font-size: 11px;
+width: 40px;
+height: 15px;
+margin-top: 3px;
+}
+
+.badge:hover{
+    background-color: rgb(97, 96, 96);
 }
 /* 여기까지 detail css*/
 

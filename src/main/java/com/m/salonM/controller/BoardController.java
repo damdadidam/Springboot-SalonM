@@ -45,4 +45,5 @@ public class BoardController {
 		model.addAttribute("board", boardService.continueReading(id));
 		return "board/updateForm";
 	}
+	
 }

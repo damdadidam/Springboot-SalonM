@@ -30,7 +30,6 @@
         minHeight: null,
         maxHeight: null,
         lang: "ko-KR",
-        placeholder: '글서랍에 쌓일 글을 작성하세요.'
       });
     </script>
 

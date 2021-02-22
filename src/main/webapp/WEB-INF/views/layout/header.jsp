@@ -19,6 +19,7 @@
   <script src="/js/summernote/summernote-lite.js"></script>
 	<script src="/js/summernote/lang/summernote-ko-KR.js"></script>
 	<link rel="stylesheet" href="/css/summernote/summernote-lite.css">
+	<link rel="shortcut icon" sizes="76x76" type="image/x-icon" href="/image/icon.png">
 
 </head>
 <body>
@@ -33,7 +34,7 @@
                 
                     <c:choose>
                     <c:when test="${empty principal}">
-                    <ul class="navbar-nav">
+                    <ul id="navbar-two" class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="/auth/loginForm">Sing in</a>
                     </li>
