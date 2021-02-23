@@ -11,7 +11,7 @@
         </div>
     </section>
     <section>
-        <div class="sec__title">최근 글</div>
+        <div class="sec__title">최신 글</div>
     </section>
     <section>
       <c:forEach var="board" items="${boards.content}">

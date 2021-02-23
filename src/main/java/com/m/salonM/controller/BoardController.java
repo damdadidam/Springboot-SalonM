@@ -56,6 +56,7 @@ public class BoardController {
 	@GetMapping("board/{id}")
 	public String findById(@PathVariable int id, Model model) {
 		model.addAttribute("board",boardService.continueReading(id));
+		model.addAttribute("users",userService.userList());
 		return "board/detail";
 	}
 	
