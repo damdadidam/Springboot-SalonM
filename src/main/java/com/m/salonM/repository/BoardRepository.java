@@ -6,4 +6,5 @@ import com.m.salonM.model.Board;
 
 public interface BoardRepository extends JpaRepository<Board,Integer> {
 
+
 }

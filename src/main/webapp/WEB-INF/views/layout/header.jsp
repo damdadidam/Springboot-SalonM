@@ -47,11 +47,11 @@
                     <c:otherwise>
                     <ul>
                         <li class="nav__dropdown">
-                            <a href="/board/shelf">bookshelves</a>
+                            <a href="javascript:;">bookshelves</a>
                             <ul>
-                                <li><a href="#">예담의 글서랍</a></li>
-                                <li><a href="#">지하의 글서랍</a></li>
-                                <li><a href="#">정주의 글서랍</a></li>
+                            <c:forEach var="user" items="${users}">
+                                <li><a href="/board/shelf/${user.id}">${user.username}의 글서랍</a></li>
+                            </c:forEach>
                             </ul>
                         </li>
                         <li><a class="nav-link" href="/board/saveForm">write</a></li>

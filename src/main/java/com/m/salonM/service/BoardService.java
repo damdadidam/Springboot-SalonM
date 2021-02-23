@@ -1,9 +1,11 @@
 package com.m.salonM.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -36,6 +38,12 @@ public class BoardService {
 	public Page<Board> writingList(Pageable pageable){
 		return boardRepository.findAll(pageable);
 	}
+	@Transactional(readOnly=true)
+	public List<Board> writingList(){
+		return boardRepository.findAll();
+	}
+	
+	
 	
 	@Transactional(readOnly=true)
 	public Board continueReading(int id) {
