@@ -12,7 +12,7 @@
             	<input type="hidden" id="id" value="${principal.user.id}">
                 <table>
                 	<tr>
-                        <td class="join__sub__title">사용자명 생성</td>
+                        <td class="join__sub__title">사용자명</td>
                     </tr>
                     <tr>
                         <td>
@@ -23,7 +23,7 @@
                     <c:choose>
 	                    <c:when test="${empty principal.user.oauth}">
 		                    <tr>
-		                    <td class="join__sub__title">이메일 주소 입력</td>
+		                    <td class="join__sub__title">이메일 주소 수정</td>
 		                    </tr>
 		                    <tr>
 		                        <td>
@@ -31,7 +31,7 @@
 		                        </td>
 		                    </tr>
 		                    <tr>
-		                        <td class="join__sub__title">비밀번호 생성</td>
+		                        <td class="join__sub__title">비밀번호 수정</td>
 		                    </tr>
 		                    <tr>
 		                        <td>
