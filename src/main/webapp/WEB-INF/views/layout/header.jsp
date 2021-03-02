@@ -36,7 +36,7 @@
                     <c:when test="${empty principal}">
                     <ul id="navbar-two" class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/auth/loginForm">Sing in</a>
+                        <a class="nav-link" href="/auth/loginForm">Sign in</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/auth/joinForm">Sign Up</a>
